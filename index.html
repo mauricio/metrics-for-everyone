@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Useful metrics to you and everyone else</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<style>
+		.red {
+			color: red;
+		}
+
+		.blue {
+			color: #1b91ff;
+		}
+
+		.green {
+			color: #c1ff0b;
+		}
+
+		.orange {
+			color: orange;
+		}
+
+		.gray {
+			color: #3f3f3f;
+		}
+
+		.yellow {
+			color: #F4FF77;
+		}
+
+		.black {
+			color: black;
+		}
+
+		.shadowed {
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		}
+	</style>
+
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+
+		<section>
+			<h1 class="shadowed">
+				Useful <span class="green">Metrics</span> to You and <span class="blue">Everyone Else</span>
+			</h1>
+			<p class="shadowed">
+				<small>
+					<a href="http://mauricio.github.io/">Maurício Linhares</a> /
+					<a href="http://twitter.com/mauriciojr">@mauriciojr</a> /
+					<span class="shadowed">Software Engineer at DigitalOcean</span>
+				</small>
+			</p>
+		</section>
+
+		<section>
+			<h1>What was our <span class="red">problem</span>?</h1>
+			<p>
+				Multiple teams with different perspectives consuming our dashboard.
+			</p>
+		</section>
+
+		<section>
+			<h1><span class="green"> Different </span> needs</h1>
+		</section>
+
+		<section>
+			<h1>
+				<span class="green">Development</span> team
+			</h1>
+			<p>
+				Lots of <span class="blue">metrics</span>, lots of <span class="red">data</span>, not a lot of detail
+				or
+				explanation.
+			</p>
+		</section>
+
+		<section>
+			<h1>What do <span class="green">we</span> care about?</h1>
+			<ul>
+				<li>Resources in use</li>
+				<li>Response time</li>
+				<li>Operations per second</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>Complex!</h1>
+			<p>
+				<img src="images/flipper.png"/>
+			</p>
+		</section>
+
+		<section>
+			<h1><span class="green"> Different </span> needs</h1>
+		</section>
+
+		<section>
+			<h1><span class="green">Everyone</span> else</h1>
+			<p>
+				<span class="red">Where</span> is it broken?
+			</p>
+		</section>
+
+		<section>
+			<h1>
+				Building distributed systems is <span class="red">hard</span>
+			</h1>
+			<p>
+				<span class="green">Making sense</span> of a distributed architecture is harder.
+			</p>
+		</section>
+
+		<section>
+			<h1>
+				We have to be <span class="green">intentional</span> in building <span
+					class="blue">visualizations</span>
+			</h1>
+		</section>
+
+		<section>
+			<h1>What do we use <span class="green">dashboards</span> for?</h1>
+			<ul>
+				<li>Pretty graphs</li>
+				<li><span class="red">Outages</span></li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>You're already <span class="red">mad</span></h1>
+			<ul>
+				<li>Time is of the essence</li>
+				<li>It's hard to learn something new under pressure</li>
+				<li>It's easy to make judgement mistakes</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>What <span class="red">question</span> are you trying to <span class="green">answer</span>?</h1>
+			<p>
+				Every dashboard should answer one or a bunch of related questions.
+			</p>
+		</section>
+
+		<section>
+			<h1>
+				Is it <span class="blue">up</span>?
+			</h1>
+		</section>
+
+		<section>
+			<h1>Where is it <span class="green">broken</span>?</h1>
+		</section>
+
+		<section>
+			<h1><span class="red">Our</span> case</h1>
+			<p>Infrastructure team, lots of downstream <span class="green">dependencies</span>.</p>
+		</section>
+
+		<section>
+			<h1>
+				<span class="blue">Separate</span> us from our <span class="red">dependencies</span>
+			</h1>
+			<p>
+				Dashboards should clearly define which metrics are yours and which ones are not.
+			</p>
+		</section>
+
+		<section>
+			<h1>Start from the <span class="green">bottom</span></h1>
+		</section>
+
+		<section>
+			<h1>Less is <span class="green">more</span></h1>
+			<p>Show less data with more context</p>
+		</section>
+
+		<section>
+			<h1><span class="red">Explain</span></h1>
+			<p>
+				Add explanation, labels and thresholds right into the dashboard.
+			</p>
+		</section>
+
+		<section>
+			<h1><span class="blue"> Uptime!</span></h1>
+			<p>
+				Define what it means to be <span class="green">healthy</span>.
+			</p>
+		</section>
+
+		<section>
+			<h1>Lets talk about <span class="green">internal</span> dashboards</h1>
+		</section>
+
+		<section>
+			<h1>Define a <span class="green">Service Level Objective</span></h1>
+			<p>
+				Make it prominent.
+			</p>
+		</section>
+
+		<section>
+			<h1>Show hardware metrics and <span class="red">limits</span></h1>
+		</section>
+
+		<section>
+			<h1>
+				Show operation <span class="green">counts</span> and response <span class="red">times</span>
+			</h1>
+			<p>
+				Forget <span class="green">averages</span>, use <span class="blue">percentiles</span>.
+			</p>
+		</section>
+
+		<section>
+			<h1>Show <span class="blue">dependency</span> metrics</h1>
+		</section>
+
+		<section>
+			<h1><span class="red">Black box</span> testing</h1>
+			<p>Testing systems from the outside</p>
+		</section>
+
+		<section>
+			<h1>
+				A view from the <span class="green">client side</span>
+			</h1>
+			<p>
+				A client side <span class="red">outage</span> is not visible with internal-only metrics
+			</p>
+		</section>
+
+		<section>
+			<h1>Thanks!</h1>
+		</section>
+
+	</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    dependencies: [
+      {src: 'plugin/markdown/marked.js'},
+      {src: 'plugin/markdown/markdown.js'},
+      {src: 'plugin/notes/notes.js', async: true},
+      {
+        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+          hljs.initHighlightingOnLoad();
+        }
+      }
+    ]
+  });
+</script>
+</body>
+</html>
